@@ -1,9 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Game, WebSocketMessage, AchievementType } from '../types';
 
+// https://dice-game-o7up.onrender.com
+
 // WebSocket URL - automatically uses production URL when deployed
 const WS_URL = import.meta.env.PROD 
-  ? (import.meta.env.VITE_WS_URL || 'wss://your-backend-url.onrender.com')
+  ? 'wss://dice-game-o7up.onrender.com'  // ⬅️ Twój URL z Render (wss://)
   : 'ws://localhost:3001';
 
 const GAME_ID_KEY = 'dices_game_id';
